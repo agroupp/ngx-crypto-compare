@@ -16,16 +16,16 @@ export class CryptoCompareService {
    * Connects to API and returns observable of CcResponse objects
    * @param subsciptions
    */
-  connect(subsciptions: CcMarketSubscription): Observable<any>;
-  connect(subscriptions: Array<CcMarketSubscription>): Observable<any>;
-  connect(subscriptions: any): Observable<any> {
+  connect(subsciptions: CcMarketSubscription): Observable<CcResponse>;
+  connect(subscriptions: Array<CcMarketSubscription>): Observable<CcResponse>;
+  connect(subscriptions: any): Observable<CcResponse> {
     let subs: Array<CcMarketSubscription> = [];
     if (!Array.isArray(subscriptions)) {
       subs.push(subscriptions);
     } else {
       subs = subscriptions;
     }
-    return Observable.create((observer: Observer<any>) => {
+    return Observable.create((observer: Observer<CcResponse>) => {
       this.socket = io(this.apiUrl);
       this.subscribeToMarketData(subs);
       this.socket.on('m', (message: string) => {

@@ -1,6 +1,6 @@
 {
   "name": "ngx-crypto-compare",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular 4 service to connect to Crypto Compare API",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
