@@ -1,0 +1,38 @@
+{
+  "name": "ngx-crypto-compare",
+  "version": "0.0.1",
+  "description": "Angular 4 service to connect to Crypto Compare API",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agroupp/ngx-crypto-compare.git"
+  },
+  "keywords": [
+    "angular",
+    "service",
+    "bitcoin",
+    "crypto-currency"
+  ],
+  "author": "Arthur Groupp <arth.groupp@gmail.com> (http://groupp.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agroupp/ngx-crypto-compare/issues"
+  },
+  "homepage": "https://github.com/agroupp/ngx-crypto-compare#readme",
+  "devDependencies": {
+    "typescript": "~2.3.3"
+  },
+  "dependencies": {
+    "@angular/core": "^4.4.6",
+    "@types/socket.io-client": "^1.4.31",
+    "rxjs": "^5.5.0",
+    "socket.io-client": "^2.0.3",
+    "zone.js": "^0.8.18"
+  }
+}
